@@ -28,7 +28,6 @@ message InsertRequest {
   repeated schema.FieldData fields_data = 13;
   uint64 num_rows = 14;
   InsertDataVersion version = 15;
-  schema.IDs delete_primary_keys = 16;
 }
 
 message DeleteRequest {
@@ -45,6 +44,7 @@ message DeleteRequest {
   int64 num_rows = 11;
   schema.IDs primary_keys = 12;
   int64 segment_id = 13;
+  repeated int64 segment_ids = 14;
 }
 
 message MsgPosition {
